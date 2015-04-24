@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Coinco_Coinco>
+            <version>1.0</version>
+        </Coinco_Coinco>
+    </modules>
+	<frontend>
+        <routers>
+            <coinco_coinco>
+                <use>standard</use>
+                <args>
+                    <module>Coinco_Coinco</module>
+                    <frontName>coinco_coinco</frontName>
+                </args>
+            </coinco_coinco>
+        </routers>
+    </frontend>
+    <global>
+        <blocks>
+            <Coinco>
+                <class>Coinco_Coinco_Block</class>
+            </Coinco>
+        </blocks>
+ 
+        <models>
+            <Coinco>
+                <class>Coinco_Coinco_Model</class>
+            </Coinco>
+        </models>
+ 
+        <resources>
+            <Coinco_setup>
+                <setup>
+                    <module>Coinco_Coinco</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </Coinco_setup>
+            <Coinco_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </Coinco_write>
+            <Coinco_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </Coinco_read>
+        </resources>
+    </global>
+ 
+    <default>
+        <payment>
+            <Coinco>
+                <active>1</active>
+                <model>Coinco/paymentMethod</model>
+                <title>Bitcoin</title>
+ 
+                <payment_action>authorize</payment_action>
+                <callback_secret>generate</callback_secret>
+            </Coinco>
+         </payment>
+    </default>
+</config>

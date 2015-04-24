@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+		<payment>
+			<groups>
+				<Coinco translate="label" module="paygate">
+					<label>Coinco</label>
+					<sort_order>700</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+                    <comment><![CDATA[<b>Setup Instructions:</b><br><ol><li>Go to <a href="https://coinco.com/settings/api">https://coinco.com/settings/api</a> and click '+ New API Key' to generate an API Key and Secret for this plugin. You should create a 'HMAC' key with the permission 'merchant' only.</li><li>After generating the API key, click on the shortened representation of it (looks like 'kcyPDdpjgYk...') to view the full API Key + Secret.</li><li>Copy and paste the API Key and API Secret into the boxes below, and save the plugin settings.</li><li><b>After generating an API key, remember to enable it on the <a href="https://coinco.com/settings/api">https://coinco.com/settings/api</a> page! If the API Key is not enabled, the plugin will not work.</b><li></ol>]]></comment>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</title>
+						
+						<api_key translate="label">
+							<label>API Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</api_key>
+						
+						<callback_secret translate="label">
+							<label>Callback Secret</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment>Callback Secret</comment>
+                        </callback_secret>
+
+						<testing translate="label">
+							<label>Testing</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</testing>
+
+					</fields>
+				</Coinco>
+			</groups>
+		</payment>
+	</sections>
+</config>
