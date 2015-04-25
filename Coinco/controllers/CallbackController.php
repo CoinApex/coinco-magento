@@ -42,6 +42,8 @@ class Coinco_Coinco_CallbackController extends Mage_Core_Controller_Front_Action
         endswitch;
 
         $order->save();
+
+        return $this;
     }
 }
 
